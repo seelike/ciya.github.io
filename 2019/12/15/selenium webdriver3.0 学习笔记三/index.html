@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Tags - Hexo</title>
+<title>学习笔记三《初识WebDriver》 - Hexo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
@@ -14,14 +14,20 @@
 
 
 
-    <meta name="keywords" content="笔记,笔记 selenuim">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+    <meta name="description" content="WebDriver原理： Selenium  Webdriver是通过各种浏览器的驱动（web driver）来驱动浏览器，原理示意图如下：   ​">
+<meta name="keywords" content="笔记 selenuim">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习笔记三《初识WebDriver》">
+<meta property="og:url" content="http://yoursite.com/2019/12/15/selenium webdriver3.0 学习笔记三/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="WebDriver原理： Selenium  Webdriver是通过各种浏览器的驱动（web driver）来驱动浏览器，原理示意图如下：   ​">
 <meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="http://img.javalemon.com/ciya/20191215/bEH6Eyv9yhjo.png">
+<meta property="og:updated_time" content="2019-12-15T11:39:02.400Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="学习笔记三《初识WebDriver》">
+<meta name="twitter:description" content="WebDriver原理： Selenium  Webdriver是通过各种浏览器的驱动（web driver）来驱动浏览器，原理示意图如下：   ​">
+<meta name="twitter:image" content="http://img.javalemon.com/ciya/20191215/bEH6Eyv9yhjo.png">
 
 
 
@@ -110,26 +116,108 @@
     </div>
 </nav>
 
-    <section class="section section-heading">
+    <section class="section">
     <div class="container">
-        <div class="content">
-            <h5>#Tags</h5>
-        </div>
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            学习笔记三《初识WebDriver》
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-12-15T11:30:36.947Z" itemprop="datePublished">12月 15 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/selenium/">selenium</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            3 分钟 读完 (约 442 字)
+        </span>
+        
     </div>
-</section>
-<section class="section">
-    <div class="container">
-        <div class="columns is-variable is-1 is-multiline is-mobile">
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <ol>
+<li><p><strong>WebDriver原理</strong>：</p>
+<p>Selenium  Webdriver是通过各种浏览器的驱动（web driver）来驱动浏览器，原理示意图如下：</p>
+</li>
+</ol>
+<p>​    <img src="http://img.javalemon.com/ciya/20191215/bEH6Eyv9yhjo.png" alt="mark"></p>
+<a id="more"></a>
+<ol start="2">
+<li><strong>在python中安装WebDriver</strong>：</li>
+</ol>
+<p>完成python，pip工具的安装后，在cmd下输入“pip install selenium”，</p>
+<p>完成安装后输入”python” 进入python 交互模式， 输入“import selenium” 没有报错即成功安装selenium。</p>
+<ol start="3">
+<li><strong>安装浏览器驱动</strong>：</li>
+</ol>
+<p>Firefox 浏览器的驱动： <a href="https://github.com/mozilla/geckodriver/releases" target="_blank" rel="noopener">https://github.com/mozilla/geckodriver/releases</a></p>
+<p>Google浏览器驱动： <a href="http://npm.taobao.org/mirrors/chromedriver/" target="_blank" rel="noopener">http://npm.taobao.org/mirrors/chromedriver/</a></p>
+<p>选择适合自己操作系统的版本进行下载。</p>
+<ol start="4">
+<li><p><strong>第一个webDriver 脚本</strong>：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#-*-coding:UTF-8-*-</span><br><span class="line">fromseleniumimportwebdriver</span><br><span class="line">fromselenium.common.exceptionsimportNoSuchElementException</span><br><span class="line">importtime</span><br><span class="line">importselenium.webdriver.support.uiasui</span><br><span class="line"></span><br><span class="line">#通过executable_path参数指明Firefox驱动文件所在路径</span><br><span class="line">#路径查询：windows系统或者采用C:/Users/34954/Downloads/geckodriver</span><br><span class="line">driver=webdriver.Firefox(executable_path=&quot;C:\\Users\\34954\\Downloads\\geckodriver&quot;)</span><br><span class="line"></span><br><span class="line">#若定位元素时间较长，可用10s内每隔500ms扫描1次页面变化，当出现指定元素后结束</span><br><span class="line">wait=ui.WebDriverWait(driver,10)</span><br><span class="line">#打开百度首页</span><br><span class="line">driver.get(&quot;https://baidu.com&quot;)</span><br><span class="line"></span><br><span class="line">try:</span><br><span class="line">	wait.until(lambdadriver:driver.find_element_by_id(&quot;kw&quot;))</span><br><span class="line">#清空搜索输入框默认内容</span><br><span class="line">	driver.find_element_by_id(&quot;kw&quot;).clear()</span><br><span class="line">#在搜索输入框内输入“自动化测试”</span><br><span class="line">	driver.find_element_by_id(&quot;kw&quot;).send_keys(&quot;自动化测试&quot;)</span><br><span class="line">#单击“搜索”按钮</span><br><span class="line">	driver.find_element_by_id(&quot;su&quot;).click()</span><br><span class="line">#若定位不到元素，抛出异常</span><br><span class="line">exceptNoSuchElementExceptionasmsg:</span><br><span class="line">	print(&quot;查找元素异常&quot;)</span><br><span class="line"></span><br><span class="line">#等待3秒</span><br><span class="line">time.sleep(3)</span><br><span class="line">#退出浏览器</span><br><span class="line">driver.quit()</span><br></pre></td></tr></table></figure>
+<p>4.1 问题及建议</p>
+<p>问题 1. 报错提示NoSuchElementException: Unable to locate element </p>
+<p>解决办法： 去网页相应的元素下查找相关的element_id， 如url为sogou.com时对应的查询id为“query”，对应的搜索button id为“stb” </p>
+</li>
+</ol>
+
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/笔记-selenuim/">#笔记 selenuim</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-prev">
             
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/笔记/">#笔记&nbsp;(2)</a>
-            </span>
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
             
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/笔记-selenuim/">#笔记 selenuim&nbsp;(1)</a>
-            </span>
+            <a href="/2019/12/15/selenium WebDriver 3.0 学习笔记一/">学习笔记一《selenium 基本原理》</a>
             
-        </div>
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="notification is-danger">
+    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
+</div>
+
+</div>
+
+
+
+<div class="comments">
+    <h3 class="title is-4">评论</h3>
+    
+<div id="disqus_thread">
+    
+    <div class="notification is-danger">
+        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
+    </div>
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
     </div>
 </section>
     <footer class="footer">
