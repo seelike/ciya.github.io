@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Categories - Hexo</title>
+<title>学习笔记一《selenium 基本原理》 - Hexo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
@@ -14,14 +14,21 @@
 
 
 
-    <meta name="keywords" content="笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+    <meta name="description" content="Selenium 的简介： Selenium1.0 ： Selenium core = Selenium Remote Control (RC )+ Selenium IDE (集成开发环境） Selenium 2.0 :  = Selenium1 + WebDriver Webdriver 用来绕过JavaScript环境的沙盒限制， 可以直接让测试工具调用浏览器和操作系统本身提供的内置方法。">
+<meta name="keywords" content="笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习笔记一《selenium 基本原理》">
+<meta property="og:url" content="http://yoursite.com/2019/12/15/selenium WebDriver 3.0 学习笔记一/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Selenium 的简介： Selenium1.0 ： Selenium core = Selenium Remote Control (RC )+ Selenium IDE (集成开发环境） Selenium 2.0 :  = Selenium1 + WebDriver Webdriver 用来绕过JavaScript环境的沙盒限制， 可以直接让测试工具调用浏览器和操作系统本身提供的内置方法。">
 <meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="http://img.javalemon.com/ciya/20191215/coCaQguAeuF0.png">
+<meta property="og:image" content="http://img.javalemon.com/ciya/20191215/xHS7WGEs2wfz.png">
+<meta property="og:updated_time" content="2019-12-15T10:47:44.377Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="学习笔记一《selenium 基本原理》">
+<meta name="twitter:description" content="Selenium 的简介： Selenium1.0 ： Selenium core = Selenium Remote Control (RC )+ Selenium IDE (集成开发环境） Selenium 2.0 :  = Selenium1 + WebDriver Webdriver 用来绕过JavaScript环境的沙盒限制， 可以直接让测试工具调用浏览器和操作系统本身提供的内置方法。">
+<meta name="twitter:image" content="http://img.javalemon.com/ciya/20191215/coCaQguAeuF0.png">
 
 
 
@@ -110,22 +117,126 @@
     </div>
 </nav>
 
-    <section class="section section-heading">
+    <section class="section">
     <div class="container">
-        <div class="content">
-            <h5><i class="far fa-folder"></i>Categories</h5>
-        </div>
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            学习笔记一《selenium 基本原理》
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-12-15T09:20:15.556Z" itemprop="datePublished">12月 15 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/selenium/">selenium</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            6 分钟 读完 (约 830 字)
+        </span>
+        
     </div>
-</section>
-<section class="section">
-    <div class="container">
-        <div class="columns is-variable is-1 is-multiline is-mobile">
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p><strong>Selenium</strong> <strong>的简介：</strong></p>
+<p>Selenium1.0 ： Selenium core = Selenium Remote Control (RC )+ Selenium IDE (集成开发环境）</p>
+<p>Selenium 2.0 :  = Selenium1 + WebDriver</p>
+<p>Webdriver 用来绕过JavaScript环境的沙盒限制， 可以直接让测试工具调用浏览器和操作系统本身提供的内置方法。</p>
+<p>Selenium 官网地址： <a href="http://www.seleniumhq.org" target="_blank" rel="noopener">www.seleniumhq.org</a></p>
+<a id="more"></a>    
+<p><strong>Selenium     RC</strong> <strong>的实现原理</strong></p>
+<p><img src="http://img.javalemon.com/ciya/20191215/coCaQguAeuF0.png" alt="mark"></p>
+<p><strong>selenium1的自动化执行步骤</strong>：</p>
+<ul>
+<li>测试人员基于Selenium支持的编程语言编写好测试脚本程序。</li>
+<li>测试人员执行测试程序。</li>
+<li>测试脚本程序发送访问网站的HTTP请求给Remote     Control Server（RC）。</li>
+<li>RC     收到请求后，访问被测试网站并获取网页数据内容，并在网页中插入Selenium     Core的JavaScript代码库，然后返回给测试人员执行测试的浏览器。</li>
+<li>测试脚本在浏览器内部再调用selenium     Core来执行测试代码逻辑，记录测试结果，完成测试</li>
+</ul>
+<p>理解以上步骤：</p>
+<ol>
+<li>理解“ <strong>同源策略</strong>” —-浏览器的JavaScript 安全机制</li>
+</ol>
+<p>​       相同的协议，端口，域名</p>
+<ol start="2">
+<li>Selenium 1工具的核心部分是基于JavaScript代码库来实现的，这个库默认地和被测网站分离，它的URL和被测网站的域名是不一致的，为了绕过浏览器安全机制，Selenium 1.0 作者使用代理方式解决问题</li>
+</ol>
+<p><img src="http://img.javalemon.com/ciya/20191215/xHS7WGEs2wfz.png" alt="mark"></p>
+<p><strong>selenium1代理模式的实现机制</strong>：</p>
+<ul>
+<li>执行测试脚本，脚本向Selenium     Server发起请求，要求和Selenium Server建立链接。</li>
+<li>Selenium     Server的Launcher启动浏览器，向浏览器中插入Selenium     Core的JavaScript代码库，并把浏览器的代理设置为Selenium Server的Http     Proxy，确保后续Core的脚本域被访问的网站的脚本同源。</li>
+<li>测试脚本向seleniumServer发送Http请求，Selenium     Server对请求进行解析，然后通过Http Proxy发送JS命令通知Selenium Core发送JS命令通知Seleniim     Core执行操作浏览器的请求。</li>
+<li>Selenium     Core收到指令后，执行测试脚本里指定的网页操作命令。</li>
+<li>浏览器收到新的请求信息，于是发送Http请求给Selenium给Selenium     Core里的Http Proxy，请求新的Web页面。（因为第二步中，selenium     Server在启动浏览器的时候，已经把浏览器的代理地址设定为Selenium Server的Http Proxy）</li>
+<li>Selenium     Server接收到请求后，自行重组http请求，向应用服务器发送请求并获取返回的web页面。</li>
+<li>Selenium Server的Http     Proxy把接收到的Web页面返回给浏览器。</li>
+</ul>
+<p><strong>WebDriver</strong>     <strong>的实现原理</strong></p>
+<p>与 selenium 1注入不同，直接利用浏览器的内部接口来操作浏览器；</p>
+<p><strong>优点：</strong> </p>
+<ul>
+<li>基于浏览器内部接口实现自动化测试，接近用户使用的真实情况；</li>
+<li>selenium必须操作浏览器，webdriver 可以使用HTMLunit进行测试，不打开浏览器进行快速测试</li>
+<li>提供了简介的面向对象API ， 提高测试脚本的编写效率</li>
+<li>使用过程中无须单独启动selenium server</li>
+</ul>
+
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/笔记/">#笔记</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-prev">
             
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/categories/selenium/">selenium&nbsp;(2)</a>
-            </span>
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
             
-        </div>
+            <a href="/2019/05/11/selenium webdriver3.0 学习笔记二/">学习笔记二《Selenium IDE》</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="notification is-danger">
+    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
+</div>
+
+</div>
+
+
+
+<div class="comments">
+    <h3 class="title is-4">评论</h3>
+    
+<div id="disqus_thread">
+    
+    <div class="notification is-danger">
+        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
+    </div>
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
     </div>
 </section>
     <footer class="footer">
