@@ -139,7 +139,7 @@
         <span class="column is-narrow">
             
             
-            11 分钟 读完 (约 1646 字)
+            11 分钟 读完 (约 1647 字)
         </span>
         
     </div>
@@ -147,124 +147,12 @@
     
         <p>官方网站： <a href="https://www.telerik.com/fiddler" target="_blank" rel="noopener">https://www.telerik.com/fiddler</a></p>
 <p>官网下载地址：  <a href="https://www.telerik.com/download/fiddler" target="_blank" rel="noopener">https://www.telerik.com/download/fiddler</a></p>
-<h3 id="简介："><a href="#简介：" class="headerlink" title="简介："></a><strong>简介：</strong></h3><p>   Fiddler是位于客户端和服务器端之间的代理，也是目前最常用的抓包工具之一 。它使用代理地址:127.0.0.1，端口:8888。能够记录客户端和服务器之间的所有请求，</p>
-<p>可以针对特定的请求，分析请求数据、设置断点、调试web应用、修改请求的数据，甚至可以修改服务器返回的数据，功能非常强大，是web调试的利器。</p>
+<h3 id="简介："><a href="#简介：" class="headerlink" title="简介："></a><strong>简介：</strong></h3><p>   Fiddler是位于客户端和服务器端之间的代理，也是目前最常用的抓包工具之一 。它使用代理地址:127.0.0.1，端口:8888。能够记录客户端和服务器之间的所有请求，可以针对特定的请求，分析请求数据、设置断点、调试web应用、修改请求的数据，甚至可以修改服务器返回的数据，功能非常强大，是web调试的利器。</p>
 <p><strong>fiddler抓包原理</strong></p>
 <p><img src="http://img.javalemon.com/ciya/20200216/S4YXW9Gthlsy.png" alt="mark"></p>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a><strong>配置</strong></h3><h4 id="Web-端配置："><a href="#Web-端配置：" class="headerlink" title="Web 端配置："></a><strong>Web 端配置：</strong></h4><ul>
-<li>配置浏览器：当启用fiddler为代理时，部分浏览器会提示风险，如Firefox ； 此时可以在浏览器设置里面设置手动代理： 127.0.0.1 端口为 8888， 可以避开风险提示；</li>
-</ul>
-<p>​     可以通过设置解决 ： Firefox： 设置 - 常规 - 网络设置 -  手动代理设置</p>
-<p><img src="http://img.javalemon.com/ciya/20200216/UnOHckFBENpz.png" alt="mark"></p>
-<ul>
-<li>对于https抓包，可以通过在设置fiddler 解密：</li>
-</ul>
-<p>​     Tools -&gt;fiddler options -&gt;HTPPS 中勾选  “Decrypt HTTPS Traffic”</p>
-<p><img src="http://img.javalemon.com/ciya/20200216/eU3immNYgQqr.png" alt="mark"></p>
-<ul>
-<li>设置信任证书 ： actions :  trust_Root_certificate</li>
-</ul>
-<p><img src="http://img.javalemon.com/ciya/20200216/WlUpeJIlx6HC.png" alt="mark"></p>
-<h4 id="手机端配置："><a href="#手机端配置：" class="headerlink" title="手机端配置："></a><strong>手机端配置：</strong></h4><ul>
-<li><p>设置fiddler 允许远程连接：</p>
-<p><img src="http://img.javalemon.com/ciya/20200216/mVRThoWa36gH.png" alt="mark"></p>
-</li>
-<li><p>手机设置手动代理到fiddler，以IOS 为例：</p>
-<ol>
-<li>设置 -&gt;通用 -&gt; 网络 -&gt; wifi</li>
-<li>wifi设置里面选择手动代理</li>
-<li>输入本机ip地址 ， 端口号设为 8888；</li>
-</ol>
-</li>
-<li>对于https抓包，需要手机安装信任证书：</li>
-</ul>
-<p>​         浏览器访问 ：电脑本地IP 地址+ 端口号8888，下载证书 </p>
-<p><img src="http://img.javalemon.com/ciya/20200216/KRhrcXJfSVlX.png" alt="mark"></p>
-<p>​        </p>
-<p>​       点击下载安装:   </p>
-<p><img src="http://img.javalemon.com/ciya/20200216/4wBUUlBFgzzG.png" alt="mark"></p>
-<h3 id="Fiddler主界面-："><a href="#Fiddler主界面-：" class="headerlink" title="Fiddler主界面 ："></a><strong>Fiddler主界面 ：</strong></h3><p><img src="http://img.javalemon.com/ciya/20200216/IOaBroKqF0MH.png" alt="mark"></p>
-<ul>
-<li>左侧面板：</li>
-</ul>
-<p>​     主要详细记录每一个请求的详细信息，包含请求结果， Http响应状态，请求地址域名，请求大小，请求响应的类型等。</p>
-<ul>
-<li>右侧面板：</li>
-</ul>
-<p>​     依据功能需要，右侧提供了分析详细请求数据，查看具体的请求信息， 以及抓取在线页面进行web 调试，修改服务器返回值等。</p>
-<h3 id="常用功能："><a href="#常用功能：" class="headerlink" title="常用功能："></a><strong>常用功能：</strong></h3><ul>
-<li><h4 id="查看接口具体的会话内容"><a href="#查看接口具体的会话内容" class="headerlink" title="查看接口具体的会话内容"></a><strong>查看接口具体的会话内容</strong></h4></li>
-</ul>
-<p>​     应用场景： 需要进行接口定位；</p>
-<p>​     操作步骤：</p>
-<p>​     一般测试时当前端报错，需要观察报错接口时，可以使用fiddler 抓包， 查看具体报错原因；</p>
-<p>​     记录接口的详细请求数据，当需要反复调试接口时，使用这些数据在postman 进行调试，快速定位问题是否已经被解决；</p>
-<ul>
-<li><h4 id="模拟慢网速的情况"><a href="#模拟慢网速的情况" class="headerlink" title="模拟慢网速的情况"></a><strong>模拟慢网速的情况</strong></h4></li>
-</ul>
-<p>​    应用场景：有时候因为网络波动导致一些异常报错， 需要复现</p>
-<p>​    操作步骤：</p>
-<p>​    Fiddler 限速通过延迟发送或接收数据的时间来限制网络的下载和上传速度，从而限速。</p>
-<p><img src="http://img.javalemon.com/ciya/20200216/2lSmpb0VD9ju.png" alt="mark"></p>
-<ul>
-<li>使用rules -&gt; performance-&gt; Simulate Modem Speeds 限速时的情况（以下是<a href="http://www.speedtest.cn/" target="_blank" rel="noopener">http://www.speedtest.cn/ </a>网站测速）</li>
-<li>采用默认的不一定符合要求，可以采用自定义配置限速参数：右侧监控面板“FiddlerScript”选项卡 -&gt; find 中输入“m_Simulate” 修改其中相应的请求，响应延迟，单位ms.  </li>
-</ul>
-<p><img src="http://img.javalemon.com/ciya/20200216/uqOIQ0FlhHDx.png" alt="mark"></p>
-<p>​     不限速时的情况：</p>
-<p><img src="http://img.javalemon.com/ciya/20200216/1EMFttxDC7Ql.png" alt="mark"></p>
-<ul>
-<li><ul>
-<li>PS : <strong>Fiddler 模拟慢网速的情况相比较于Charles 来说，Charles 效果更显著些，当fiddler 效果不明显时建议使用Charles</strong></li>
-</ul>
-</li>
-</ul>
-<p>​         Charles模拟慢网速使用方法： proxy -&gt; Throtting setting 中：</p>
-<p> <img src="http://img.javalemon.com/ciya/20200216/vdGAYmEQtvbg.png" alt="mark"></p>
-<ul>
-<li><h4 id="mock数据："><a href="#mock数据：" class="headerlink" title="mock数据："></a><strong>mock数据：</strong></h4></li>
-</ul>
-<p>​     应用场景：需要测试一些异常的case，需要更改任意请求参数 或者响应参数时， 比如前端做了限制不允许输入</p>
-<p>​     操作步骤： 选中我们需要mock的会话 -&gt; 保存服务器返回body内容在任意文件夹  -&gt; 修改body内容， 在 AutoResponder 中导入 -&gt; 勾选 enable rules ,再次请求</p>
-<p><img src="http://img.javalemon.com/ciya/20200216/A2Jv663NwpVf.png" alt="mark"></p>
-<ul>
-<li><h4 id="设置断点-快速修改返回参数-："><a href="#设置断点-快速修改返回参数-：" class="headerlink" title="设置断点,快速修改返回参数 ："></a><strong>设置断点,快速修改返回参数 ：</strong></h4></li>
-</ul>
-<p>​     应用场景：需要拦截所有的请求， 比上述mock更快捷，但仅适用于一次性请求</p>
-<p>​     操作步骤：1. Rules -&gt; Automatic Breakpoint -&gt;before Request 或者 直接点击会话列表下方的断点按钮； </p>
-<p>​              \2. 修改请求参数后，点击 “break to response “查看响应参数 ；</p>
-<p>​              \3. 点击”run to completion“ 查看web端调试结果</p>
-<p> <img src="http://img.javalemon.com/ciya/20200216/4eiVALRMnjnr.png" alt="mark"></p>
-<ul>
-<li><h4 id="重复请求会话"><a href="#重复请求会话" class="headerlink" title="重复请求会话"></a><strong>重复请求会话</strong></h4></li>
-</ul>
-<p>​     应用场景：网络中断或者需要进行简单的性能测试，频繁调用同一接口</p>
-<p>​     操作步骤：右击选中的请求 -》 replay -》Reissue sequentially -》设置一次请求的次数</p>
-<p>​    <img src="http://img.javalemon.com/ciya/20200216/hKjiP5XPXmvd.png" alt="mark"></p>
-<p>​       <strong>PS：</strong> 对比Charles， Charles也可以设置重复请求：</p>
-<p>​      <img src="http://img.javalemon.com/ciya/20200216/wKTBRm3ARz9n.png" alt="mark"></p>
-<p><strong>Fiddler 抓取不到包的原因：</strong></p>
-<ol>
-<li>一般来说，打开fiddler 就是抓包状态，如果没有开始抓包见下；</li>
-<li>首先确定一下 file-&gt;capture traffic 这个是否勾选—》即页面左下角capturing 是否打开；</li>
-<li><p>如果访问的网站是https网站， 则可以通过Tools - Fiddler Options - Https - Decrypt Http Traffic来设置将https解密； 依然抓不到包，查看是否安装了正确的https证书</p>
-<p><img src="http://img.javalemon.com/ciya/20200216/DF8EzrJuz0LA.png" alt="mark"></p>
-</li>
-</ol>
-<p>手机客户端请求抓不到的原因（这个Charles 与之基本类似）：</p>
-<ul>
-<li>是否在同一局域网内；</li>
-<li>是否有防火墙拦截；</li>
-<li>Fiddler(charles) 是否允许远程客户端连接；</li>
-<li>监听端口号是否是默认的8888；</li>
-<li>IOS 手机设置信任证书： 设置  - 通用 - 关于本机 - 证书信任设置 中手动设置信任证书；</li>
-</ul>
-<p><img src="http://img.javalemon.com/ciya/20200216/TafORLIglGnu.png" alt="mark"></p>
-<p><strong>Fiddler 和Charles:</strong></p>
-<p>​       共同点：抓包，断点调试，请求替换，代理功能</p>
-<p>​       不同点：Charles是收费的，但可以在各大主流平台都可以使用；</p>
-<p>​                       Fiddler开源免费， 但只能在windows上运行；</p>
-
+        <p class="article-more-link">
+            <a href="/2020/02/16/测试工具 - Fiddler/#more">阅读更多</a>
+        </p>
     
     </div>
     
