@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Tag: python - Hexo</title>
+<title>日常小记《Ubuntu升级python及设置默认版本》 - Hexo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
@@ -14,13 +14,18 @@
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/python/index.html">
+    <meta name="description" content="ubuntu 升级 python 2.7 - python 3.6 查询一般办法：   添加安装源ppa：   ​       sudo add-apt-repository ppa:jonathonf/python-3.6  加入python3.6 安装源进入系统后，更新软件列表：  ​       sudo apt-get update  更新安装源后，安装python3.6： sudo ap">
+<meta name="keywords" content="日常小记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日常小记《Ubuntu升级python及设置默认版本》">
+<meta property="og:url" content="http://yoursite.com/2020/03/08/Ubuntu升级python版本及版本切换/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="ubuntu 升级 python 2.7 - python 3.6 查询一般办法：   添加安装源ppa：   ​       sudo add-apt-repository ppa:jonathonf/python-3.6  加入python3.6 安装源进入系统后，更新软件列表：  ​       sudo apt-get update  更新安装源后，安装python3.6： sudo ap">
 <meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2020-03-08T08:22:52.504Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="日常小记《Ubuntu升级python及设置默认版本》">
+<meta name="twitter:description" content="ubuntu 升级 python 2.7 - python 3.6 查询一般办法：   添加安装源ppa：   ​       sudo add-apt-repository ppa:jonathonf/python-3.6  加入python3.6 安装源进入系统后，更新软件列表：  ​       sudo apt-get update  更新安装源后，安装python3.6： sudo ap">
 
 
 
@@ -109,25 +114,17 @@
     </div>
 </nav>
 
-    <section class="section section-heading">
+    <section class="section">
     <div class="container">
-        <div class="content">
-            <h5>#python</h5>
-        </div>
-    </div>
-</section>
-<section class="section">
-    <div class="container">
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
+    <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            <a href="/2019/12/16/python_keyword_with/" itemprop="url">python keyword 之 with</a>
+            日常小记《Ubuntu升级python及设置默认版本》
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
         <span class="column is-narrow">
-            <time datetime="2019-12-16T15:39:52.716Z" itemprop="datePublished">12月 16 2019</time>
+            <time datetime="2020-03-08T07:33:54.328Z" itemprop="datePublished">3月 8 2020</time>
         </span>
         
         <span class="column is-narrow article-category">
@@ -139,38 +136,127 @@
         <span class="column is-narrow">
             
             
-            2 分钟 读完 (约 318 字)
+            5 分钟 读完 (约 709 字)
         </span>
         
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <p><strong>with:</strong></p>
+        <p><strong>ubuntu</strong> <strong>升级</strong> <strong>python 2.7 - python 3.6</strong></p>
+<p>查询一般办法： </p>
 <ol>
-<li>基本语法格式：     with exp [as      target]; </li>
+<li>添加安装源ppa： </li>
 </ol>
-<p>target 可以是变量或者元组，存储exp返回的结果；</p>
+<p>​       sudo add-apt-repository ppa:jonathonf/python-3.6</p>
+<ol start="2">
+<li>加入python3.6 安装源进入系统后，更新软件列表：</li>
+</ol>
+<p>​       sudo apt-get update</p>
+<ol start="3">
+<li><p>更新安装源后，安装python3.6：</p>
+<p>sudo apt-get install python3.6</p>
+<a id="more"></a>   
+</li>
+</ol>
+<p>报错之后可以采用：</p>
 <ol>
-<li>With是一种上下文管理协议，其表达式其实是try - finally 的简写形式，但没有except 功能；</li>
-<li>使用with处理的对象必须包含方法 <strong>enter</strong>()和<strong>exit</strong>()；</li>
-<li><strong>enter</strong>()在方法体执行前运行，初始化代码块，并将返回值赋值给as关键字后的变量;</li>
-<li><strong>exit</strong>() 在方法体执行结束后运行，关闭代码块，释放资源，如文件使用后关闭等。即便代码块抛出异常也调用<strong>exit</strong>() 退出代码块。</li>
+<li><p>sudo add-apt-repository ppa:deadsnakes/ppa</p>
+<p> 继续执行：</p>
+</li>
+<li><p>sudo apt-get update</p>
+</li>
+<li><p>sudo     apt-get install python3.6</p>
+</li>
 </ol>
-<p><strong>工作原理代码示意</strong></p>
-        <p class="article-more-link">
-            <a href="/2019/12/16/python_keyword_with/#more">阅读更多</a>
-        </p>
+<p>依然不成功的话：</p>
+<p>可以查看是否系统配置有问题， 或者因为网络原因导致更新源没有更新成功，切换网络试试。</p>
+<p>安装完成之后， 接下来设置python3.6的优先级和默认：</p>
+<p><strong>调整python3 的优先级</strong>：</p>
+<p>sudo update-alternatives –install /usr/bin/python3 python3 /usr/bin/python3.5 1</p>
+<p>sudo update-alternatives –install /usr/bin/python3 python3 /usr/bin/python3.6 2</p>
+<p>注：</p>
+<p>–install 选项使用多个参数用于创建符号链接，最后一个参数指定了此选项的优先级，优先级高的选项会被选中。 此例子中， 因为python3 /usr/bin/python3.6 设置的优先级为2， 所以在update-alternatives命令会在 /usr/bin/python3 版本下自动将python3.6 设置为 python3 默认版本。</p>
+<p><strong>设置默认版本</strong></p>
+<p>更改python默认，系统默认为python 2，现更改为python3：</p>
+<p>sudo update-alternatives –install /usr/bin/python python /usr/bin/python2 100</p>
+<p>sudo update-alternatives –install /usr/bin/python python /usr/bin/python3 150</p>
+<p>注：</p>
+<p>此例设置python 2 和 python 3 的优先级，这里python 3 在/usr/bin/python 中优先级更高，所以默认python3</p>
+<p><strong>系统切换默认版本：</strong></p>
+<p>~$ update-alternatives –list python  # 列出所有可用的python替代版本信息</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/user/bin/python2</span><br><span class="line">/user/bin/python2</span><br></pre></td></tr></table></figure>
+<p>~$ python –version  #查看默认python版本</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python 3.6.10</span><br></pre></td></tr></table></figure>
+<p>切换默认版本到python2</p>
+<p>~$ sudo update-alternatives –config python </p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">lvxiran@lvxiran-virtual-machine:~$ sudo update-alternatives --config python</span><br><span class="line">[sudo] lvxiran 的密码： </span><br><span class="line">有 2 个候选项可用于替换 python (提供 /usr/bin/python)。</span><br><span class="line"></span><br><span class="line">  选择       路径            优先级  状态</span><br><span class="line">------------------------------------------------------------</span><br><span class="line">* 0            /usr/bin/python3   150       自动模式</span><br><span class="line">  1            /usr/bin/python2   100       手动模式</span><br><span class="line">  2            /usr/bin/python3   150       手动模式</span><br><span class="line"></span><br><span class="line">要维持当前值[*]请按&lt;回车键&gt;，或者键入选择的编号：1</span><br><span class="line">update-alternatives: 使用 /usr/bin/python2 来在手动模式中提供 /usr/bin/python (python)</span><br></pre></td></tr></table></figure>
+<p>再次查看python 默认版本已经变成 python2 了</p>
+<p><strong>更优的解决办法：</strong></p>
+<p>##有关virtualenv 详见 《virtuale环境和flask安装》</p>
+<p>安装virtualenv ,实现不同版本之间的切换</p>
+<p>mkdir venvflask  #新建一个项目文件夹</p>
+<p>cd venvflask    #进入到该文件夹下</p>
+<p>已经安装pip：</p>
+<p>pip install virtualenv</p>
+<p>未安装pip： </p>
+<p>sudo apt-get install python-virtualenv</p>
+<p>创建一个虚拟环境：</p>
+<p>virtualenv venv</p>
+<p>创建一个python包之间没有关联的虚拟环境：</p>
+<p>virtualenv –no-site-packages venv</p>
+<p>激活虚拟环境：</p>
+<p>source venv/bin/activate</p>
+<p>切换Python版本工作时：</p>
+<p>cd ~/path/to/project  #进入项目文件夹</p>
+<p>source ~/venvflask/venv/bin/activate  #切换到虚拟环境中python版本工作</p>
+
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/日常小记/">#日常小记</a></span>
     
     </div>
     
     
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-prev">
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2020/02/16/测试工具 - Fiddler/">Fiddler的使用及与Charles区别</a>
+            
+        </span>
+    </div>
+    
 </article>
 
 
+<div class="sharebox">
+    
+<div class="notification is-danger">
+    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
+</div>
+
+</div>
 
 
+
+<div class="comments">
+    <h3 class="title is-4">评论</h3>
     
+<div id="disqus_thread">
     
+    <div class="notification is-danger">
+        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
+    </div>
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
     </div>
 </section>
     <footer class="footer">
