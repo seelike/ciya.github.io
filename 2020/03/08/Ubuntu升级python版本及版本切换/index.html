@@ -184,12 +184,12 @@
 <p>此例设置python 2 和 python 3 的优先级，这里python 3 在/usr/bin/python 中优先级更高，所以默认python3</p>
 <p><strong>系统切换默认版本：</strong></p>
 <p>~$ update-alternatives –list python  # 列出所有可用的python替代版本信息</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/user/bin/python2</span><br><span class="line">/user/bin/python2</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/user/bin/python2</span><br><span class="line">/user/bin/python2</span><br></pre></td></tr></table></figure>
 <p>~$ python –version  #查看默认python版本</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python 3.6.10</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python 3.6.10</span><br></pre></td></tr></table></figure>
 <p>切换默认版本到python2</p>
 <p>~$ sudo update-alternatives –config python </p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">lvxiran@lvxiran-virtual-machine:~$ sudo update-alternatives --config python</span><br><span class="line">[sudo] lvxiran 的密码： </span><br><span class="line">有 2 个候选项可用于替换 python (提供 /usr/bin/python)。</span><br><span class="line"></span><br><span class="line">  选择       路径            优先级  状态</span><br><span class="line">------------------------------------------------------------</span><br><span class="line">* 0            /usr/bin/python3   150       自动模式</span><br><span class="line">  1            /usr/bin/python2   100       手动模式</span><br><span class="line">  2            /usr/bin/python3   150       手动模式</span><br><span class="line"></span><br><span class="line">要维持当前值[*]请按&lt;回车键&gt;，或者键入选择的编号：1</span><br><span class="line">update-alternatives: 使用 /usr/bin/python2 来在手动模式中提供 /usr/bin/python (python)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">lvxiran@lvxiran-virtual-machine:~$ sudo update-alternatives --config python</span><br><span class="line">[sudo] lvxiran 的密码： </span><br><span class="line">有 2 个候选项可用于替换 python (提供 /usr/bin/python)。</span><br><span class="line"></span><br><span class="line">  选择       路径            优先级  状态</span><br><span class="line">------------------------------------------------------------</span><br><span class="line">* 0            /usr/bin/python3   150       自动模式</span><br><span class="line">  1            /usr/bin/python2   100       手动模式</span><br><span class="line">  2            /usr/bin/python3   150       手动模式</span><br><span class="line"></span><br><span class="line">要维持当前值[*]请按&lt;回车键&gt;，或者键入选择的编号：1</span><br><span class="line">update-alternatives: 使用 /usr/bin/python2 来在手动模式中提供 /usr/bin/python (python)</span><br></pre></td></tr></table></figure>
 <p>再次查看python 默认版本已经变成 python2 了</p>
 <p><strong>更优的解决办法：</strong></p>
 <p>##有关virtualenv 详见 《virtuale环境和flask安装》</p>
@@ -226,7 +226,7 @@
         </span>
         <span class="column is-12-mobile is-half-desktop  article-nav-next">
             
-            <a href="/2020/02/16/测试工具 - Fiddler/">Fiddler的使用及与Charles区别</a>
+            <a href="/2020/03/05/virtualenv/">日常小记《virtual环境和flask安装》</a>
             
         </span>
     </div>
