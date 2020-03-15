@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>归档: 2019/12 - Hexo</title>
+<title>学习笔记二《Selenium IDE》 - Hexo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
@@ -14,13 +14,23 @@
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/12/index.html">
+    <meta name="description" content="Selenium IDE：  Selenium IDE仅作为Mozilla Firefox和Chrome插件提供，可实现网页操作步骤的录制和回放， 执行简单测试逻辑的自动化测试， 可以将录制的测试脚本导出为C#，Java，Ruby或Python等编程语言  主界面如图：">
+<meta name="keywords" content="笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习笔记二《Selenium IDE》">
+<meta property="og:url" content="http://yoursite.com/2019/11/18/selenium webdriver3.0 学习笔记二/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Selenium IDE：  Selenium IDE仅作为Mozilla Firefox和Chrome插件提供，可实现网页操作步骤的录制和回放， 执行简单测试逻辑的自动化测试， 可以将录制的测试脚本导出为C#，Java，Ruby或Python等编程语言  主界面如图：">
 <meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="http://img.javalemon.com/ciya/20191215/chi1elyER7Uy.png">
+<meta property="og:image" content="http://img.javalemon.com/ciya/20191215/dM83uvvhcCjn.png">
+<meta property="og:image" content="http://img.javalemon.com/ciya/20191215/aXkpXcIiBPhq.png">
+<meta property="og:image" content="http://img.javalemon.com/ciya/20191215/5I7CJqjU96gM.png">
+<meta property="og:updated_time" content="2020-03-15T12:09:01.809Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="学习笔记二《Selenium IDE》">
+<meta name="twitter:description" content="Selenium IDE：  Selenium IDE仅作为Mozilla Firefox和Chrome插件提供，可实现网页操作步骤的录制和回放， 执行简单测试逻辑的自动化测试， 可以将录制的测试脚本导出为C#，Java，Ruby或Python等编程语言  主界面如图：">
+<meta name="twitter:image" content="http://img.javalemon.com/ciya/20191215/chi1elyER7Uy.png">
 
 
 
@@ -111,22 +121,132 @@
 
     <section class="section">
     <div class="container">
-    
-    
-        <div class="archive content">
-            <h4 class="title is-4" id="2019">2019</h4>
-            <div class="articles">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            学习笔记二《Selenium IDE》
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-11-17T16:00:00.000Z" itemprop="datePublished">11月 18 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/selenium/">selenium</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
             
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2019-12-20T16:00:00.000Z" itemprop="datePublished">
-                        12月 21</time>
-                    <h6 class="title is-6"><a href="/2019/12/21/测试工具 - Fiddler/">Fiddler的使用及与Charles区别</a></h6>
-                </div>
             
-            </div>
-        </div>
+            4 分钟 读完 (约 528 字)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p><strong>Selenium IDE</strong>：</p>
+<ul>
+<li>Selenium IDE仅作为Mozilla Firefox和Chrome插件提供，可实现网页操作步骤的录制和回放， 执行简单测试逻辑的自动化测试， 可以将录制的测试脚本导出为C#，Java，Ruby或Python等编程语言</li>
+</ul>
+<p><strong>主界面如图：</strong></p>
+<p><img src="http://img.javalemon.com/ciya/20191215/chi1elyER7Uy.png" alt="mark"></p>
+<a id="more"></a>   
+<p><strong>常用工具栏</strong>：</p>
+<p><img src="http://img.javalemon.com/ciya/20191215/dM83uvvhcCjn.png" alt="mark"></p>
+<p>从左到右依次是： 执行所有case按钮， 执行当前case按钮，单步执行按钮，测试用例执行速度控制栏， 断点， 暂停录制，录制脚本按钮</p>
+<p>Selenium IDE脚本介绍：</p>
+<ul>
+<li><p>Commond 命令也成为selenese;</p>
+</li>
+<li><p>Selenese 最多有两个参数（target 和 value ),也可以有一个（target） 或者没有参数；</p>
+</li>
+<li><p>Selenese 命令类型：</p>
+</li>
+<li><ul>
+<li>Actions 类型： 如click 命令表示单击页面元素； type命令会在页面文本框输入文字，输入的内容显示在文本框中</li>
+<li>Accessors 存储器类型： 如storeTitle存储型命令，将页面的title信息读取出来，并存储到变量中，与页面元素本身没有交互</li>
+<li>Assertions断言类型： 如 Assert， Verify，waitFor</li>
+</ul>
+</li>
+</ul>
+<p><strong>部分验证点操作：</strong> </p>
+<p>选中一个验证点， 编辑脚本中可以更改验证点： </p>
+<p><img src="http://img.javalemon.com/ciya/20191215/aXkpXcIiBPhq.png" alt="mark"></p>
+<p>“右键” 插入一个新的command， 查看编辑脚本区，列表展示合适的验证点</p>
+<p><img src="http://img.javalemon.com/ciya/20191215/5I7CJqjU96gM.png" alt="mark"></p>
+<p>以上录制脚本中：</p>
+<ul>
+<li><p>case全部通过， 左下角显示绿色进度条说明case通过； 如果没有通过，则显示红色提示，说明失败case;</p>
+</li>
+<li><p>已经跑完通过的case在脚本显示区为绿色</p>
+</li>
+<li><p>未执行完成的case为黄色</p>
+</li>
+<li><p>尚未执行的case为灰色</p>
+</li>
+<li><p>执行失败的case为红色</p>
+</li>
+</ul>
+<p>tips：</p>
+<ol>
+<li><p>Selenium IDE：学习此插件需要熟悉HTML, JavaScript, DOM </p>
+</li>
+<li><p>Selenium IDE 仅适用于执行简单逻辑的自动化测试脚本，不适用大项目</p>
+</li>
+</ol>
+
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/笔记/">#笔记</a></span>
+    
+    </div>
     
     
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2019/11/24/selenium webdriver3.0 学习笔记三/">学习笔记三《初识WebDriver》</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2019/11/17/selenium WebDriver 3.0 学习笔记一/">学习笔记一《selenium 基本原理》</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="notification is-danger">
+    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
+</div>
+
+</div>
+
+
+
+<div class="comments">
+    <h3 class="title is-4">评论</h3>
+    
+<div id="disqus_thread">
+    
+    <div class="notification is-danger">
+        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
+    </div>
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
     </div>
 </section>
     <footer class="footer">
